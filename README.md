@@ -30,5 +30,5 @@ However, I would personally recommend you not to obtain a license from me as it 
 # Violating the license or personal agreement
 If you were to violate the license, it would have been a legal issue but if you violate the personal agreement (which is the long paragraph on top), this will be a serious issue because that counts as a copyright ingfringement and will be dealt with case by case.
 
-## Read on the updates of this site [here](https://autonabil.github.io/todos.txt)
+## Read on the updates of this site [here](https://autonabil.github.io/incommit/todos.txt)
 
