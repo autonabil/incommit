@@ -24,6 +24,7 @@ body{
 }
 
 .header-wrapper{
+    text-align: center;
     padding: 20px 0;
     margin-bottom: 50px;
     /* background: #e94444; */
@@ -68,3 +69,12 @@ body{
     /* border-bottom: 2px solid #e94444; */
     
 }
+/* 
+.footer-wrapper{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #e94444;
+    color: #161616;
+    padding: 20px 0;
+} */
