@@ -2,7 +2,8 @@
 [X] - add footer - Nabil Ridhwanshah (C) 2018
 [X] - style the page (red and black)
         - black is rgb(22,22,22)
-        -red is (tbc)
+        - red is (tbc)
+        - font family from google fonts (keyword: nu)
 [ ] - include github repo link in footer
 [ ] - passive testing
         - no users exist verification
