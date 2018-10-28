@@ -1,13 +1,16 @@
-UPDATED ON 28 OCTOBER 2018 1530
+UPDATED ON 28 OCTOBER 2018 1542
+
+THIS IS OUR CURRENT UPDATES THAT WE WIL DEPLOY SOON. THE ONES THAT ARE [X] MEANS THAT THE TODO IS ALREADY DONE.
 
 [X] - update repo description and name to follow the readme
 [ ] - add functionality
+        [X] - Added libraries
 [X] - add footer - Nabil Ridhwanshah (C) 2018
 [ ] - include github repo link in footer
-[X] - style the page
+[ ] - style the page
         [X] - black is rgb(22,22,22)
         [X] - red is (tbc)
-        [ ] - font family from google fonts (keyword: nu)
+        [X] - font family from google fonts (keyword: nu)
         [ ] - styling properly
 [ ] - passive testing
         [ ] - no users exist verification

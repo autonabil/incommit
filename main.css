@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:700,800,900');
+
 body{
-    background:rgb(22,22,22);
-    color: rgb(233, 68, 68);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#161616;
+    color: #e94444;
+    font-family: 'Nunito Sans', sans-serif;
+    word-break: break-all;
 }
 
 .nav-wrapper ul{
@@ -26,4 +29,28 @@ body{
 
 .header-wrapper p{
     font-size: 20px;
+}
+
+.btn-primary{
+    background: #e94444;
+    color: #161616;
+    border: 0;
+}
+
+.form-control{
+    background: #e94444;
+    color: #161616;
+    border: 0;
+}
+
+.form-control::placeholder{
+    color: #161616;
+}
+
+.header-wrapper{
+    margin: 100px 0;
+}
+
+.results-wrapper{
+    margin: 20px 0;
 }

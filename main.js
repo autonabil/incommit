@@ -5,7 +5,7 @@ var app = new Vue({
         return{
             user: "",
             repo: "",
-            repolink: "",
+            repolink: "https://github.com/autonabil/incommit",
             githubdata: [],
         }
     },
