@@ -1,6 +1,6 @@
 UPDATED ON 28 OCTOBER 2018 1509
 
-[ ] - update repo description to follow the readme
+[ ] - update repo description and name to follow the readme
 [ ] - add functionality
 [X] - add footer - Nabil Ridhwanshah (C) 2018
 [ ] - include github repo link in footer
@@ -13,4 +13,4 @@ UPDATED ON 28 OCTOBER 2018 1509
         [ ] - no users exist verification
 [ ] - favicon
 [ ] - minify javascript and link to index.html
-[ ] - deploy!
+[ ] - deploy! 
