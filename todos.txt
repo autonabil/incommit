@@ -1,9 +1,11 @@
+UPDATED ON 28 OCTOBER 2018 1453
+
 [ ] - add functionality
 [X] - add footer - Nabil Ridhwanshah (C) 2018
 [X] - style the page (red and black)
-        - black is rgb(22,22,22)
-        - red is (tbc)
-        - font family from google fonts (keyword: nu)
+        [X] - black is rgb(22,22,22)
+        [X] - red is (tbc)
+        [ ]- font family from google fonts (keyword: nu)
 [ ] - include github repo link in footer
 [ ] - passive testing
         - no users exist verification
