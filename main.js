@@ -3,17 +3,18 @@ var app = new Vue({
     
     data(){
         return{
-            user: "",
-            repo: "",
+            user: "autonabil",
+            repo: "incommit",
             repolink: "https://github.com/autonabil/incommit",
             githubdata: [],
+            error: "none"
         }
     },
 
     methods: {
         getData(){
 
-            fetch(link)
+            fetch("https://api.github.com/repos/" + this.user + "/" + this.repo + "/commits")
             .then(response => response.json())
             .then(json => {
                 console.log(json)

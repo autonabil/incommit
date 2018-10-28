@@ -23,45 +23,60 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="getinvolved.html">Get Involved</a></li>
                 </ul>
-
             </div>
 
-            <div class="header-wrapper">
-                <h1>Welcome To <br> Incommit</h1>
-                <p>In commits, we trust!</p>
+        </div>
+
+        <div class="header-wrapper">
+            <div class="container">
+                <h1>Incommits</h1>
+                <p>See latest commits of a repo quickly</p>
             </div>
+        </div>
 
-            <div class="form-wrapper">
+        <div class="form-wrapper">
+            <div class="container">
 
-                <h3>Get started by entering the user and the repository name and press the 'See Commits' button</h3>
-                <div class="form-group">
-                    <input type="text" class="form-control" v-model="user" placeholder="User">
+                <div class="row">
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Enter the user on GitHub</label>
+                            <input type="text" class="form-control" v-model="user" placeholder="User">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label>Enter the reposotory by the user on GitHub</label>
+                            <input type="text" class="form-control" v-model="repo" placeholder="Repo">
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="form-group">
-                    <input type="text" class="form-control" v-model="repo" placeholder="Repo">
+                <button class="btn btn-primary" @click="getData()">See Commits</button>
+
+
+                <!-- TO BE CHANGED [EXAMPLE OF COMMIT] -->
+                <div class="results-wrapper">
+
+                    <h1>Results</h1>
+
+                    <div class="result" v-for="data in githubdata">
+                        <h3>{{data.commit.message}}</h3>
+                        <p>By {{data.commit.author.name}} On {{data.commit.author.date}}</p>
+                    </div>
+
                 </div>
 
-                <button class="btn btn-primary">See Commits</button>
+                <div class="footer-wrapper">
 
-            </div>
+                    <h6>Nabil Ridhwanshah (C) 2018</h6>
 
-            <!-- TO BE CHANGED [EXAMPLE OF COMMIT] -->
-            <div class="results-wrapper">
-
-                <div class="result">
-                    <h3>changed index.html</h3>
-                    <p>by autonabil on 23 October 2018</p>
                 </div>
 
             </div>
-
-            <div class="footer-wrapper">
-
-                <h6>Nabil Ridhwanshah (C) 2018</h6>
-
-            </div>
-
         </div>
     </div>
 
