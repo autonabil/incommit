@@ -5,6 +5,7 @@ var app = new Vue({
         return{
             user: "",
             repo: "",
+            repolink: "",
             githubdata: [],
         }
     },
@@ -18,7 +19,6 @@ var app = new Vue({
                 console.log(json)
                 this.githubdata = json;
             })
-            
         }
     }
     
