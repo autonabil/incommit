@@ -3,9 +3,9 @@ var app = new Vue({
     
     data(){
         return{
-            user: "autonabil",
+            user: "renabil",
             repo: "incommit",
-            repolink: "https://github.com/autonabil/incommit",
+            repolink: "https://github.com/renabil/incommit",
             githubdata: [],
             error: "none"
         }
