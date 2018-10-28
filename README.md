@@ -1,2 +1,4 @@
-# site
-description incoming
+# Oncommit
+Getting the latest commits from a repo
+
+Read more on the updates of this site [here](https://username.github.io/oncommit)
