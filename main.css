@@ -1,0 +1,20 @@
+body{
+    background:rgb(22,22,22);
+    color: rgb(233, 68, 68);
+}
+
+.nav-wrapper ul{
+    margin: 50px 0;
+    padding: 0;
+}
+
+.nav-wrapper li{
+    display: inline;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.nav-wrapper a{
+    color: rgb(233, 68, 68);
+    text-decoration: none;
+}
