@@ -2,12 +2,14 @@ UPDATED ON 28 OCTOBER 2018 1453
 
 [ ] - add functionality
 [X] - add footer - Nabil Ridhwanshah (C) 2018
-[X] - style the page (red and black)
+[ ] - include github repo link in footer
+[X] - style the page
         [X] - black is rgb(22,22,22)
         [X] - red is (tbc)
-        [ ]- font family from google fonts (keyword: nu)
-[ ] - include github repo link in footer
+        [ ] - font family from google fonts (keyword: nu)
+        [ ] - styling properly
 [ ] - passive testing
-        - no users exist verification
+        [ ] - no users exist verification
 [ ] - favicon
+[ ] - minify javascript and link to index.html
 [ ] - deploy!

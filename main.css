@@ -1,6 +1,7 @@
 body{
     background:rgb(22,22,22);
     color: rgb(233, 68, 68);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .nav-wrapper ul{
@@ -17,4 +18,12 @@ body{
 .nav-wrapper a{
     color: rgb(233, 68, 68);
     text-decoration: none;
+}
+
+.header-wrapper h1{
+    font-size: 65px;
+}
+
+.header-wrapper p{
+    font-size: 20px;
 }
