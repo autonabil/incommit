@@ -13,6 +13,8 @@ var app = new Vue({
     methods: {
         getRepos(user){
 
+            $(".repo-wrapper").toggle()
+
             fetch("https://api.github.com/users/" + user + "/repos")
             .then(response => response.json())
             .then(json => {
@@ -21,6 +23,9 @@ var app = new Vue({
         },
 
         getCommits(reponame,username){
+
+            $(".repo-wrapper").toggle()
+            
             fetch("https://api.github.com/repos/" + username + "/" + reponame + "/commits")
             .then(response => response.json())
             .then(json => {
@@ -30,8 +35,4 @@ var app = new Vue({
         }
     },
 
-    mounted(){
-        this.getRepos('google')
-    }
-    
 })
