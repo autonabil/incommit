@@ -7,8 +7,6 @@
     <title>Incommit</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
@@ -17,33 +15,19 @@
     <div class="app">
         <div class="container">
 
-            <div class="header-wrapper">
-                <div class="container">
-                    <h1>Incommits</h1>
-                    <p>See latest commits of a repo quickly</p>
-                </div>
-            </div>
+            <h1>Incommits</h1>
+            <p>See latest commits of a repo quickly</p>
 
-            <div class="form-wrapper">
-                <div class="container">
-                    <div class="row">
+            <label>Enter the user on GitHub</label>
+            <input type="text" class="form-control" v-model="user" placeholder="User">
 
-                        <div class="form-group">
-                            <label>Enter the user on GitHub</label>
-                            <input type="text" class="form-control" v-model="user" placeholder="User">
-                        </div>
-
-                    </div>
-
-                    <button class="btn btn-primary" @click="getRepos(user)">Get Repositories</button>
-                </div>
-            </div>
+            <button class="btn btn-primary" @click="getRepos(user)">Get Repositories</button>
 
             <div class="results-wrapper" v-for='repo in repodata'>
                 <h1>{{repo.name}}</h1>
-                <button class="btn btn-primary" >Get Repo</button>
+                <button class="btn btn-primary">Get Repo</button>
             </div>
-            
+
         </div>
     </div>
 
