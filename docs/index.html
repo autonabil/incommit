@@ -25,11 +25,14 @@
 
             <div class="repo-wrapper" v-for='repo in repodata'>
                 <h1>{{repo.name}}</h1>
+                <p>{{repo.description}}</p>
                 <button class="btn btn-primary" @click='getCommits(repo.name,repo.owner.login)'>Get Commits</button>
             </div>
 
             <div class="commits-wrapper" v-for='commit in commitsdata'>
-                <p>{{commit.commit.message}}</p>
+                <h2>{{commit.commit.message}}</h2>
+                <small>{{commit.commit.author.name}}</small>
+                <small>{{commit.commit.author.date}}</small>
             </div>
 
         </div>

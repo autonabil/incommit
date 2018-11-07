@@ -14,6 +14,7 @@ var app = new Vue({
         getRepos(user){
 
             $(".repo-wrapper").toggle()
+            $(".commits-wrapper").toggle()
 
             fetch("https://api.github.com/users/" + user + "/repos")
             .then(response => response.json())
@@ -25,6 +26,7 @@ var app = new Vue({
         getCommits(reponame,username){
 
             $(".repo-wrapper").toggle()
+            $(".commits-wrapper").toggle()
             
             fetch("https://api.github.com/repos/" + username + "/" + reponame + "/commits")
             .then(response => response.json())
