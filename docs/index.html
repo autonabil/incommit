@@ -23,11 +23,15 @@
 
             <button class="btn btn-primary" @click="getRepos(user)">Get Repositories</button>
 
-            <div class="results-wrapper" v-for='repo in repodata'>
+            <div id="repo-wrapper" v-for='repo in repodata'>
                 <h1>{{repo.name}}</h1>
-                <button class="btn btn-primary">Get Repo</button>
+                <button class="btn btn-primary" @click='getCommits(repo.name,repo.owner.login)'>Get Commits</button>
             </div>
 
+            <div id="commits-wrapper" v-for='commit in commitsdata'>
+                    <p>{{commit.commit.message}}</p>
+                </div>
+            
         </div>
     </div>
 

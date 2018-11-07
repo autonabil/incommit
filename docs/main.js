@@ -6,6 +6,7 @@ var app = new Vue({
             user: "renabil",
             repo: "incommit",
             repodata: [],
+            commitsdata: [],
         }
     },
 
@@ -15,14 +16,22 @@ var app = new Vue({
             fetch("https://api.github.com/users/" + user + "/repos")
             .then(response => response.json())
             .then(json => {
-                console.log(json)
                 this.repodata = json;
+            })
+        },
+
+        getCommits(reponame,username){
+            fetch("https://api.github.com/repos/" + username + "/" + reponame + "/commits")
+            .then(response => response.json())
+            .then(json => {
+                console.log(json)
+                this.commitsdata = json
             })
         }
     },
 
     mounted(){
-        this.getRepos('renabil')
+        this.getRepos('google')
     }
     
 })
