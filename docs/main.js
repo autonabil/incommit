@@ -4,7 +4,6 @@ var app = new Vue({
     data() {
         return {
             user: "renabil",
-            repo: "incommit",
             repodata: [],
             commitsdata: [],
         }

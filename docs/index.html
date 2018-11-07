@@ -41,13 +41,16 @@
                 </div>
             </div>
 
-            <div class="commits-wrapper" v-for='(commit,i) in commitsdata' class="card">
+            <div class="commits-wrapper" v-for='(commit,i) in commitsdata.slice().reverse()' class="card">
 
-                <h1 class="card-header muted">{{i+1}}</h1>
+                <h4 class="card-header muted">{{i+1}}</h4>
                 
                 <div class="card-body">
                     <h2 class="card-title">{{commit.commit.message}}</h2>
                     <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.name}}</small>
+
+                    <br>
+                    
                     <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.date}}</small>
                 </div>
             </div>
