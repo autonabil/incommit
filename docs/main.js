@@ -1,8 +1,8 @@
 var app = new Vue({
     el: ".app",
-    
-    data(){
-        return{
+
+    data() {
+        return {
             user: "renabil",
             repo: "incommit",
             repodata: [],
@@ -11,29 +11,34 @@ var app = new Vue({
     },
 
     methods: {
-        getRepos(user){
+        getRepos(user) {
 
-            $(".repo-wrapper").toggle()
-            $(".commits-wrapper").toggle()
+            if (user) {
+                $(".repo-wrapper").toggle()
+                $(".commits-wrapper").toggle()
 
-            fetch("https://api.github.com/users/" + user + "/repos")
-            .then(response => response.json())
-            .then(json => {
-                this.repodata = json;
-            })
+                fetch("https://api.github.com/users/" + user + "/repos")
+                    .then(response => response.json())
+                    .then(json => {
+                        this.repodata = json;
+                    })
+            }
         },
 
-        getCommits(reponame,username){
+        getCommits(reponame, username) {
 
-            $(".repo-wrapper").toggle()
-            $(".commits-wrapper").toggle()
-            
-            fetch("https://api.github.com/repos/" + username + "/" + reponame + "/commits")
-            .then(response => response.json())
-            .then(json => {
-                console.log(json)
-                this.commitsdata = json
-            })
+            if (reponame && username) {
+                $(".repo-wrapper").toggle()
+                $(".commits-wrapper").toggle()
+
+                fetch("https://api.github.com/repos/" + username + "/" + reponame + "/commits")
+                    .then(response => response.json())
+                    .then(json => {
+                        console.log(json)
+                        this.commitsdata = json
+                    })
+            }
+
         }
     },
 
