@@ -4,35 +4,46 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Incommit</title>
+    <title>Incommits</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 
 <body>
 
     <div class="app">
+
+        <div class="jumbotron">
+            <div class="container">
+                <h1>Incommits</h1>
+                <p>See latest commits of a repo quickly</p>
+
+                <label>Enter the user on GitHub</label>
+                <input type="text" class="form-control" v-model="user" placeholder="User">
+
+                <br>
+                
+                <button class="btn btn-primary" @click="getRepos(user)">Get Repositories</button>
+            </div>
+        </div>
+
         <div class="container">
 
-            <h1>Incommits</h1>
-            <p>See latest commits of a repo quickly</p>
 
-            <label>Enter the user on GitHub</label>
-            <input type="text" class="form-control" v-model="user" placeholder="User">
-
-            <button class="btn btn-primary" @click="getRepos(user)">Get Repositories</button>
-
-            <div class="repo-wrapper" v-for='repo in repodata'>
-                <h1>{{repo.name}}</h1>
-                <p>{{repo.description}}</p>
-                <button class="btn btn-primary" @click='getCommits(repo.name,repo.owner.login)'>Get Commits</button>
+            <div class="repo-wrapper" v-for='repo in repodata' class="card">
+                <div class="card-body">
+                    <h1 class="card-title">{{repo.name}}</h1>
+                    <p class="card-subtitle mb-2 text-muted">{{repo.description}}</p>
+                    <button class="btn btn-primary" @click='getCommits(repo.name,repo.owner.login)'>Get Commits</button>
+                </div>
             </div>
 
-            <div class="commits-wrapper" v-for='commit in commitsdata'>
-                <h2>{{commit.commit.message}}</h2>
-                <small>{{commit.commit.author.name}}</small>
-                <small>{{commit.commit.author.date}}</small>
+            <div class="commits-wrapper" v-for='commit in commitsdata' class="card">
+                <h2 class="card-title">{{commit.commit.message}}</h2>
+                <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.name}}</small>
+                <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.date}}</small>
             </div>
 
         </div>
