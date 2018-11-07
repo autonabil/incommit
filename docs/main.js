@@ -5,22 +5,24 @@ var app = new Vue({
         return{
             user: "renabil",
             repo: "incommit",
-            repolink: "https://github.com/renabil/incommit",
-            githubdata: [],
-            error: "none"
+            repodata: [],
         }
     },
 
     methods: {
-        getData(){
+        getRepos(user){
 
-            fetch("https://api.github.com/repos/" + this.user + "/" + this.repo + "/commits")
+            fetch("https://api.github.com/users/" + user + "/repos")
             .then(response => response.json())
             .then(json => {
                 console.log(json)
-                this.githubdata = json;
+                this.repodata = json;
             })
         }
+    },
+
+    mounted(){
+        this.getRepos('renabil')
     }
     
 })
