@@ -17,20 +17,21 @@
 
         <div class="jumbotron">
             <div class="container">
-                <h1>Incommits</h1>
-                <p>See latest commits of a repo quickly</p>
+                <h1 class="title">Incommits</h1>
+                <h5>See latest commits of a repo quickly</h5>
+
+                <hr>
 
                 <label>Enter the user on GitHub</label>
                 <input type="text" class="form-control" v-model="user" placeholder="User">
 
                 <br>
-                
+
                 <button class="btn btn-primary" @click="getRepos(user)">Get Repositories</button>
             </div>
         </div>
 
         <div class="container">
-
 
             <div class="repo-wrapper" v-for='repo in repodata' class="card">
                 <div class="card-body">
@@ -40,10 +41,15 @@
                 </div>
             </div>
 
-            <div class="commits-wrapper" v-for='commit in commitsdata' class="card">
-                <h2 class="card-title">{{commit.commit.message}}</h2>
-                <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.name}}</small>
-                <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.date}}</small>
+            <div class="commits-wrapper" v-for='(commit,i) in commitsdata' class="card">
+
+                <h1 class="card-header muted">{{i+1}}</h1>
+                
+                <div class="card-body">
+                    <h2 class="card-title">{{commit.commit.message}}</h2>
+                    <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.name}}</small>
+                    <small class="card-subtitle mb-2 text-muted">{{commit.commit.author.date}}</small>
+                </div>
             </div>
 
         </div>
